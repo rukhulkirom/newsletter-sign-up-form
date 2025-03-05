@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter Sign-up Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="newsletter-content">
+        <h1 class="newsletter-title">Stay updated!</h1>
+        <p class="newsletter-description">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="newsletter-list">
+          <li class="newsletter-item">
+            Product discovery and building what matters
+          </li>
+          <li class="newsletter-item">
+            Measuring to ensure updates are a success
+          </li>
+          <li class="newsletter-item">And much more!</li>
+        </ul>
+
+        <form id="signup-form">
+          <label for="email" class="email-label">Email address</label>
+          <input
+            type="email"
+            id="email"
+            class="email-input"
+            placeholder="email@company.com"
+          />
+          <span class="error-message">Valid email required</span>
+          <button type="submit" class="subscribe-button">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+
+      <div class="newsletter-image">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="./assets/images/illustration-sign-up-mobile.svg"
+          />
+          <img
+            src="./assets/images/illustration-sign-up-desktop.svg"
+            alt="Sign Up Illustration"
+          />
+        </picture>
+      </div>
+    </div>
+
+    <div class="success-modal" id="success-modal">
+      <div class="success-content">
+        <img
+          src="./assets/images/icon-success.svg"
+          alt="Success"
+          class="success-icon"
+        />
+        <h2 class="success-title">Thanks for subscribing!</h2>
+        <p class="success-description">
+          A confirmation email has been sent to
+          <strong id="confirmed-email">ash@loremcompany.com</strong>. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+        <button class="dismiss-button" id="dismiss-button">
+          Dismiss message
+        </button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
